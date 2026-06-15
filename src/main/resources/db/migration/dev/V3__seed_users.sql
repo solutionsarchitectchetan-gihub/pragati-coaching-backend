@@ -1,0 +1,12 @@
+-- ============================================================
+-- V3 : Seed Users — Admin + Teachers  (Dev)
+--
+-- Passwords are BCrypt encoded (strength 10):
+--   admin123    → $2a$10$slYQmyNdgzBedRF0ZnXGKOcHSkl0PxYOFgXbRqIqOe./m.vPFvR5u  (NOT used below)
+--
+-- ⚠️  In Dev, users are seeded by DataSeeder.java (uses Spring PasswordEncoder at runtime).
+--     This V3 migration is intentionally a no-op — DataSeeder handles users for dev.
+--     For PROD see db/migration/prod/V3__seed_users.sql which has real BCrypt hashes.
+-- ============================================================
+
+-- (no-op for dev — DataSeeder.java runs after Flyway and seeds users with runtime BCrypt encoding)
