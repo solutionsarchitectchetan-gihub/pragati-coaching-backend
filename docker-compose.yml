@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: .
+    container_name: pragati-backend
+    ports:
+      - "8080:8080"
+    env_file: .env.dev
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - JAVA_OPTS=-Xmx512m -Xms256m
+    networks:
+      - pragati-net
+    restart: unless-stopped
+
+networks:
+  pragati-net:
+    driver: bridge
