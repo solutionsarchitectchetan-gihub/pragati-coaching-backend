@@ -3,7 +3,7 @@
 --
 -- Passwords are BCrypt encoded (Spring Security strength 10):
 --
---   admin123    → $2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lh5S
+--   admin@808T-3 → $2b$10$q5z80hdTKRUW96iWmxHxmuoN2jmmmKf5TTy5PJ4bs34b4s0TsR40O
 --   teacher123  → $2a$10$8gHQy5oZ4J6Wm7Qe9d6C4uH2vX8K5mP3nR1oT7wY4bL6iA9xS0jB
 --   manager123  → $2a$10$3vK9rL8mP2nS5wQ1jH7tY4bX6iA0oT9wR7eL8mP3nS5wQ1jH7tYu
 --
