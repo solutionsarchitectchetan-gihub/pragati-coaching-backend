@@ -54,7 +54,7 @@ public class DataSeeder implements CommandLineRunner {
             User.builder()
                 .username("admin")
                 .email("admin@pragaticoaching.com")
-                .password(passwordEncoder.encode("admin123"))
+                .password(passwordEncoder.encode("admin@808T-3"))
                 .fullName("Admin User")
                 .role(adminRole)
                 .active(true).build(),
@@ -66,7 +66,7 @@ public class DataSeeder implements CommandLineRunner {
                 .role(teacherRole)
                 .active(true).build()
         ));
-        log.info("Users seeded. Admin: admin/admin123");
+        log.info("Users seeded. Admin: admin/admin@808T-3");
     }
 
     private void seedCourses() {
