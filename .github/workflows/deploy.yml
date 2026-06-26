@@ -51,5 +51,5 @@ jobs:
           script: |
             cd ~/pragati-coaching-backend
             docker compose pull
-            docker compose up -d --remove-orphans
+            docker compose up -d --force-recreate --remove-orphans
             docker image prune -f
