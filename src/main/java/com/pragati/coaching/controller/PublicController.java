@@ -49,7 +49,7 @@ public class PublicController {
             "studentsEnrolled", "2500+",
             "yearsOfExcellence", "15+",
             "successRate", "92%",
-            "expertFaculty", "25+"
+            "expertFaculty", "50+"
         );
         return ResponseEntity.ok(ApiResponse.ok(stats));
     }
