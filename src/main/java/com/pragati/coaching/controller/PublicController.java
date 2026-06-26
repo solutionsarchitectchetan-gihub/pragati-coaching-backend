@@ -29,7 +29,7 @@ public class PublicController {
                    "desc", "Recorded HD video lectures available 24×7 on our portal — never miss a class"),
             Map.of("id", 3, "name", "Hi-Fi Audio System",  "icon", "mic",
                    "desc", "Crystal-clear audio with professional microphone setup and noise cancellation in every room"),
-            Map.of("id", 4, "name", "Air Conditioned",     "icon", "wind",
+            Map.of("id", 4, "name", "Air-Conditioned",     "icon", "wind",
                    "desc", "100% air-conditioned campus — stay comfortable and focused all year round"),
             Map.of("id", 5, "name", "Digital Library",     "icon", "book-open",
                    "desc", "5,000+ books, study materials, previous year papers and online resources"),
