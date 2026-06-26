@@ -38,8 +38,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/pragati-backend:latest
-            ${{ secrets.DOCKER_USERNAME }}/pragati-backend:${{ github.sha }}
+            architectchetan/pragati-backend:latest
+            architectchetan/pragati-backend:${{ github.sha }}
 
       # 6 — SSH into EC2 and deploy
       - name: Deploy to EC2

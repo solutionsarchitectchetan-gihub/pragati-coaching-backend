@@ -1,6 +1,6 @@
 services:
   backend:
-    image: ${DOCKER_USERNAME:architectchetan}/pragati-backend:latest
+    image: architectchetan/pragati-backend:latest
     container_name: pragati-backend
     ports:
       - "8080:8080"
