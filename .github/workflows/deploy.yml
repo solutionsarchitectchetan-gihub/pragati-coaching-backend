@@ -56,10 +56,7 @@ jobs:
           script: |
             set -e
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            if [ ! -d ~/pragati-coaching-backend ]; then
-              git clone https://github.com/solutionsarchitectchetan-gihub/pragati-coaching-backend.git ~/pragati-coaching-backend
-            fi
-            cd ~/pragati-coaching-backend
+            cd ~/pragati/backend/pragati-coaching-backend
             docker compose pull
             docker compose up -d --force-recreate --remove-orphans
             docker image prune -f
