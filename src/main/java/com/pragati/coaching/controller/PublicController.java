@@ -23,7 +23,7 @@ public class PublicController {
     @GetMapping("/infrastructure")
     public ResponseEntity<ApiResponse<?>> infrastructure() {
         var infra = List.of(
-            Map.of("id", 1, "name", "Smart Classrooms",    "icon", "monitor",
+            Map.of("id", 1, "name", "Smart-Classrooms",    "icon", "monitor",
                    "desc", "10 fully equipped smart classrooms with HD projectors, digital boards and seamless Wi-Fi"),
             Map.of("id", 2, "name", "HD Video Lectures",   "icon", "video",
                    "desc", "Recorded HD video lectures available 24×7 on our portal — never miss a class"),
