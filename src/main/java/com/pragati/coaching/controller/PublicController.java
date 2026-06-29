@@ -43,6 +43,11 @@ public class PublicController {
         return ResponseEntity.ok(ApiResponse.ok(infra));
     }
 
+    @GetMapping("/health")
+    public ResponseEntity<ApiResponse<?>> health() {
+        return ResponseEntity.ok(ApiResponse.ok(Map.of("status", "UP", "version", "1.0.1")));
+    }
+
     @GetMapping("/stats")
     public ResponseEntity<ApiResponse<?>> publicStats() {
         var stats = Map.of(
