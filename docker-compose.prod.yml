@@ -31,8 +31,6 @@ services:
       - pragati-net
     restart: always
 
-volumes:
-  postgres_data:
 
 networks:
   pragati-net:
