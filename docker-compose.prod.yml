@@ -1,6 +1,6 @@
 services:
   backend:
-
+    image: architectchetan/pragati-backend:latest
     container_name: pragati-backend-prod
     ports:
       - "8080:8080"
