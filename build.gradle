@@ -7,9 +7,6 @@ plugins {
 group   = 'com.pragati'
 version = '1.0.0'
 
-ext {
-    set('flyway.version', '10.21.0')  // PostgreSQL 18 support
-}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
