@@ -1,20 +1,4 @@
 services:
-  postgres:
-    image: postgres:16-alpine
-    container_name: pragati-postgres
-    environment:
-      POSTGRES_DB: pragatidb
-      POSTGRES_USER: ${DATABASE_USER:-pragati}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-pragati123}
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    networks:
-      - pragati-net
-    healthcheck:
-      test: ["CMD-SHELL","pg_isready -U pragati"]
-      interval: 10s
-      retries: 5
-
   backend:
     build: .
     container_name: pragati-backend-prod
