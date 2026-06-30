@@ -42,7 +42,17 @@ jobs:
             architectchetan/pragati-backend:latest
             architectchetan/pragati-backend:${{ github.sha }}
 
-      # 6 — SSH into EC2 and deploy
+      # 6 — Copy docker-compose.prod.yml to EC2 (keeps it in sync with repo)
+      - name: Sync docker-compose to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "docker-compose.prod.yml"
+          target: "~/pragati/backend/pragati-coaching-backend/"
+
+      # 7 — SSH into EC2 and deploy
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1
         env:
