@@ -8,13 +8,9 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=prod
       - JAVA_OPTS=-Xmx1g -Xms512m -XX:+UseG1GC
-    depends_on:
-      postgres:
-        condition: service_healthy
     networks:
       - pragati-net
     restart: always
-
 
 networks:
   pragati-net:
