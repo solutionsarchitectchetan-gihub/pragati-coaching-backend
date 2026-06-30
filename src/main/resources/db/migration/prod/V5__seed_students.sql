@@ -1,12 +1,12 @@
 -- ============================================================
--- V5 : Seed Students — 20 realistic sample records  (Prod — MySQL)
+-- V5 : Seed Students — 20 realistic sample records  (Prod — PostgreSQL)
 -- ============================================================
 
-INSERT IGNORE INTO students (full_name, email, phone, roll_number, course, batch, standard,
-                              address, status, join_date, fees_paid, total_fees,
-                              parent_name, parent_phone, created_at, updated_at)
+INSERT INTO students (full_name, email, phone, roll_number, course, batch, standard,
+                      address, status, join_date, fees_paid, total_fees,
+                      parent_name, parent_phone, created_at, updated_at)
 VALUES
--- ── IIT-JEE Foundation ────────────────────────────────────────────────────────
+-- IIT-JEE Foundation
 ('Arjun Mehta',      'arjun.mehta@student.com',    '9876543201', 'PCC2024001',
  'IIT-JEE Foundation', 'Batch-A Morning', 'Class 12',
  '12 MG Road, Jaipur, Rajasthan 302001', 'ACTIVE', '2024-01-15', 45000, 45000,
@@ -27,7 +27,7 @@ VALUES
  '89 C-Scheme, Jaipur, Rajasthan 302001', 'ACTIVE', '2024-01-20', 30000, 45000,
  'Krishnan Nair', '9876543004', NOW(), NOW()),
 
--- ── NEET Medical ──────────────────────────────────────────────────────────────
+-- NEET Medical
 ('Priya Singh',      'priya.singh@student.com',    '9876543205', 'PCC2024005',
  'NEET Medical', 'Batch-C Afternoon', 'Class 12',
  '23 Bani Park, Jaipur, Rajasthan 302016', 'ACTIVE', '2024-01-15', 42000, 42000,
@@ -48,7 +48,7 @@ VALUES
  '11 Jawahar Nagar, Jaipur, Rajasthan 302004', 'ACTIVE', '2024-03-01', 42000, 42000,
  'Sunil Verma', '9876543008', NOW(), NOW()),
 
--- ── Class 10 Board Excellence ─────────────────────────────────────────────────
+-- Class 10 Board Excellence
 ('Rahul Singh',      'rahul.singh@student.com',    '9876543209', 'PCC2024009',
  'Class 10 Board Excellence', 'Board-A', 'Class 10',
  '78 Shyam Nagar, Jaipur, Rajasthan 302019', 'ACTIVE', '2024-04-01', 18000, 18000,
@@ -64,7 +64,7 @@ VALUES
  '90 Malviya Nagar, Jaipur, Rajasthan 302017', 'ACTIVE', '2024-04-05', 18000, 18000,
  'Ashok Trivedi', '9876543011', NOW(), NOW()),
 
--- ── Class 12 PCM ──────────────────────────────────────────────────────────────
+-- Class 12 PCM
 ('Vikram Yadav',     'vikram.yadav@student.com',   '9876543212', 'PCC2024012',
  'Class 12 PCM', 'PCM-Evening', 'Class 12',
  '22 Nirman Nagar, Jaipur, Rajasthan 302019', 'ACTIVE', '2024-03-15', 10000, 22000,
@@ -80,7 +80,7 @@ VALUES
  '14 Gopalpura, Jaipur, Rajasthan 302018', 'DROPPED', '2024-02-01', 5000, 22000,
  'Manoj Bansal', '9876543014', NOW(), NOW()),
 
--- ── Foundation Class 8-10 ─────────────────────────────────────────────────────
+-- Foundation Class 8-10
 ('Karan Gupta',      'karan.gupta@student.com',    '9876543215', 'PCC2024015',
  'Foundation Class 8-10', 'Foundation-Weekend', 'Class 9',
  '33 Durgapura, Jaipur, Rajasthan 302018', 'ACTIVE', '2024-06-01', 14000, 14000,
@@ -96,7 +96,7 @@ VALUES
  '8 Sitapura, Jaipur, Rajasthan 302022', 'ACTIVE', '2024-06-05', 14000, 14000,
  'Rajesh Chauhan', '9876543017', NOW(), NOW()),
 
--- ── Crash Course ──────────────────────────────────────────────────────────────
+-- Crash Course
 ('Siddharth Jain',   'siddharth.jain@student.com', '9876543218', 'PCC2024018',
  'Crash Course JEE Mains', 'Crash-Jan', 'Dropper',
  '19 Muhana, Jaipur, Rajasthan 302029', 'ACTIVE', '2024-01-05', 12000, 12000,
@@ -110,4 +110,6 @@ VALUES
 ('Harsh Mishra',     'harsh.mishra@student.com',   '9876543220', 'PCC2024020',
  'NEET Medical', 'Batch-D Weekend', 'Class 12',
  '3 Adarsh Nagar, Jaipur, Rajasthan 302004', 'ACTIVE', '2024-05-10', 42000, 42000,
- 'Kamlesh Mishra', '9876543020', NOW(), NOW());
+ 'Kamlesh Mishra', '9876543020', NOW(), NOW())
+
+ON CONFLICT (email) DO NOTHING;

@@ -29,13 +29,12 @@ dependencies {
     runtimeOnly    'io.jsonwebtoken:jjwt-impl:0.12.3'
     runtimeOnly    'io.jsonwebtoken:jjwt-jackson:0.12.3'
 
-    // Database — H2 for dev, MySQL for prod
+    // Database — H2 for dev, PostgreSQL for prod
     runtimeOnly 'com.h2database:h2'
-    runtimeOnly 'com.mysql:mysql-connector-j'
+    runtimeOnly 'org.postgresql:postgresql'
 
-    // Flyway — schema & data migrations
+    // Flyway — schema & data migrations (PostgreSQL support built into flyway-core)
     implementation 'org.flywaydb:flyway-core'
-    implementation 'org.flywaydb:flyway-mysql'   // MySQL dialect support
 
     // Lombok
     compileOnly             'org.projectlombok:lombok'
